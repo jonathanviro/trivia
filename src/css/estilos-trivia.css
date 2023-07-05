@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Alata';
+    min-height: 100%;
+    background-image: url(../img/fondo_trivia.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.grid-container > * {
+    color: #f5f6f4;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 5px 5px 4px #2f3640;
+    border-radius: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "logo-trivia"
+    "footer";
+    grid-template-rows: 25% 55% 10% auto;
+}
+
+.header {
+    align-self: center;
+    grid-area: header;
+    /* background-color: aquamarine; */
+}
+
+.logo-trivia {
+    align-self: center;
+    grid-area: logo-trivia;
+    /* background-color: aquamarine; */
+}
+
+.main {
+    display: grid;
+    grid-area: main;
+    /* background-color: rgb(13, 108, 218); */
+    grid-template-areas: 
+    "correctas incorrectas"
+    "pregunta pregunta"
+    "opciones-container opciones-container"
+    "opcion-1 opcion-1"
+    "opcion-2 opcion-2"
+    "opcion-3 opcion-3";
+}
+
+.correctas{
+    align-self: center;
+    grid-area: correctas;
+    /* background-color: aquamarine; */
+}
+
+.incorrectas{
+    align-self: center;
+    grid-area: incorrectas;
+    /* background-color: rgb(7, 90, 62); */
+}
+
+.pregunta{
+    grid-area: pregunta;
+    align-self: center;
+    height: 330px;
+    overflow: auto;
+    padding: 20px;
+    /* background-color: rgb(2, 41, 28); */
+}
+
+.opciones-container{
+    grid-area: opcion-1;
+    align-self: center;
+}
+
+.opcion-1{
+    grid-area: opcion-1;
+    align-self: center;
+    /* background-color: rgb(18, 116, 146); */
+}
+
+.opcion-2{
+    grid-area: opcion-2;
+    align-self: center;
+    /* background-color: rgb(30, 50, 68); */
+}
+
+.opcion-3{
+    grid-area: opcion-3;
+    align-self: center;
+    /* background-color: rgb(173, 52, 189); */
+}
+
+.siguiente{
+    align-self: center;
+    grid-area: siguiente;
+    /* background-color: rgb(51, 5, 63); */
+}
+
+
+
+.footer {
+    align-self: end;
+    justify-content: center;
+    grid-area: footer;
+    /* background-color: rgb(103, 28, 224); */
+}
+
+.logo {
+    min-width: 30%;
+    height: auto;
+    width: 50%;
+}
+
+
+.footer-img-1 {
+    margin-right: 300px;
+    max-width: 25%;
+    height: auto;
+}
+
+.footer-img-2 {
+    max-width: 13%;
+    height: auto;
+}
+
+.container-opcion {
+  position: relative;
+}
+
+.container-opcion img {
+  display: block;
+  width: 100%;
+}
+
+.container-opcion span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Asegura que los spans estén por encima de las imágenes */
+}
+
+.container-opcion img.superpuesta {
+  position: absolute;
+  top: 23px;
+  left: -3px;
+  z-index: 2; /* Coloca esta imagen por encima de los spans */
+  opacity: 0.6;
+}

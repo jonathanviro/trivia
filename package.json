@@ -1,0 +1,18 @@
+{
+    "name": "01-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "dev": "electron app.js",
+        "package-win": "electron-packager . trivia --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"trivia\""
+    },
+    "author": "Ing. Jonathan Vivero",
+    "license": "ISC",
+    "dependencies": {
+        "electron": "^21.0.1"
+    },
+    "devDependencies": {
+        "electron-packager": "^16.0.0"
+    }
+}

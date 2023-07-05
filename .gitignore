@@ -1,0 +1,12 @@
+# Dependencias de Node.js
+/node_modules
+
+
+/.idea
+/.vscode
+
+# Archivos de compilación de Electron
+/dist
+
+# Ejecutable
+/release-builds/

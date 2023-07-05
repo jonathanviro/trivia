@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./src/css/estilos-trivia.css" />
+        <link rel="stylesheet" href="./src/css/estilos-modal.css" />
+        <link rel="stylesheet" href="./src/css/fuentes.css" />
+    </head>
+    <body class="grid-container">
+        <div id="modal-container">
+            <div class="modal-background">
+                <div class="modal">
+                    <img id="imagen-regalo" height="500px" />
+                    <p id="texto-regalo"></p>
+                </div>
+            </div>
+        </div>
+        <header class="header">
+            <img class="logo" src="./src/img/logo_trivia.png" alt="logo_trivia"/>
+        </header>
+
+        <div class="main">
+            <span class="correctas">CORRECTAS: <span id="contador-correctas">0</span></span>
+            <span class="incorrectas">INCORRECTAS: <span id="contador-incorrectas">0</span></span>
+            <div class="pregunta">
+                <p><span id="contador-preguntas">1</span> / 5 </p>
+                <br>
+                <p id="question"></p>
+            </div>
+            <div id="opciones-container" class="opciones-container"></div>
+        </div>
+
+        <div class="logo-trivia">
+            <img src="./src/img/logo_trivia_2.png" alt="logo_trivia_2" width="40%"/>
+        </div>
+
+        <footer class="footer">
+            <img class="footer-img-2" id="btnNuevoJuevo" src="./src/img/reintentar.png" alt="jugar" />
+        </footer>
+
+        <script src="./src/js/jquery.min.js"></script>
+        <script src="./src/js/script-modal.js"></script>
+        <script src="./src/js/script-trivia.js"></script>
+        <script src="./src/js/script-timing.js"></script>
+    </body>
+</html>
